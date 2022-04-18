@@ -1,12 +1,12 @@
 package com.indivara.university.entity;
 
+import com.indivara.university.dto.RecordDTO;
 import lombok.*;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.io.Serializable;
+
+
 
 
 @Data
@@ -21,8 +21,8 @@ public class RecordAchievement implements Serializable {
     @Id
     @GeneratedValue
     private long recordID;
-    private int lecturerID;
     private int studentID;
+    private int lecturerID;
     private int subjectID;
     private int period;
     private double quiz;

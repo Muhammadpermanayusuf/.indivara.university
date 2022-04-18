@@ -5,6 +5,7 @@ import com.indivara.university.dto.CourseDTO;
 import com.indivara.university.entity.Course;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
 
 import java.util.List;
 

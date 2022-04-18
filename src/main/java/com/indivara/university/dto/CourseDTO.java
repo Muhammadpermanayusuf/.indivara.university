@@ -10,10 +10,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class CourseDTO {
     private long subjectID;
-    private String studentName;
+    private int studentID;
     private String subjectName;
-    private String major;
-    private String faculty;
     private String day;
     private String timeTable;
     private String collegeCredits;

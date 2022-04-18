@@ -1,5 +1,6 @@
 package com.indivara.university.service;
 
+import com.indivara.university.dto.CourseDTO;
 import com.indivara.university.entity.Course;
 import com.indivara.university.entity.Student;
 import com.indivara.university.entity.Subject;
@@ -22,6 +23,8 @@ public class CourseService {
     public List<Course> getCourses() {
         return courseRepository.findAll();
     }
+
+
 
     public Course updateCourse(Course course) {
         Course existingCourse = courseRepository.getById(course.getCourseID());

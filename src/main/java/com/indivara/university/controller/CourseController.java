@@ -1,5 +1,6 @@
 package com.indivara.university.controller;
 
+import com.indivara.university.dto.CourseDTO;
 import com.indivara.university.entity.Course;
 import com.indivara.university.entity.Student;
 import com.indivara.university.repository.CourseRepository;
@@ -16,8 +17,7 @@ public class CourseController {
 
     @Autowired
     private CourseService courseService;
-    @Autowired
-    private CourseRepository courseRepository;
+
 
     @GetMapping
     public void getAllCourses(){
@@ -37,4 +37,6 @@ public class CourseController {
     public List<Course> findAllCourses(){
         return courseService.getCourses();
     }
+
+
 }
