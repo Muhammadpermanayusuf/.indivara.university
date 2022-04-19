@@ -20,7 +20,7 @@ public class SubjectController {
 
 
 
-    @PostMapping("/addsubject")
+    @PostMapping("/addSubject")
     public Subject addSubject(@RequestBody Subject subject){
         return subjectService.saveSubject(subject);
     }
@@ -29,7 +29,7 @@ public class SubjectController {
     public List <Subject> findAllSubjects(){
         return subjectService.getSubjects();
     }
-    @PutMapping("/editsubject")
+    @PutMapping("/editSubject")
     public Subject updateSubject(@RequestBody Subject subject){
         return subjectService.updateSubject(subject);
     }

@@ -19,7 +19,7 @@ public class Lecturer implements  Serializable{
     private String dateOfBirth;
     private String education;
     private String major;
-    private String sex;
+    private String gender;
     private String email;
     private String contactPerson;
     private String address;

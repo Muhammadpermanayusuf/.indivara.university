@@ -1,6 +1,5 @@
 package com.indivara.university.controller;
 
-import com.indivara.university.dto.CourseDTO;
 import com.indivara.university.entity.Course;
 import com.indivara.university.entity.Student;
 import com.indivara.university.repository.CourseRepository;
@@ -12,31 +11,42 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 
+
 @RestController
 public class CourseController {
 
     @Autowired
     private CourseService courseService;
-
+    @Autowired
+    private CourseRepository courseRepository;
 
     @GetMapping
     public void getAllCourses(){
 
     }
-    @PostMapping("/addCourse")
+    @PostMapping("student/addCourse")
     public Course addCourse(@RequestBody Course course){
         return courseService.saveCourse(course);
     }
 
-    @PutMapping("/lecturerAddStudent")
+    @PutMapping("lecturer/addCourse")
     public Course updateCourse(@RequestBody Course course){
         return courseService.updateCourse(course);
     }
 
-    @GetMapping("/courses")
+    @GetMapping("lecturer/courses")
     public List<Course> findAllCourses(){
         return courseService.getCourses();
     }
 
+
+    @GetMapping("/student/MyCourses")
+    public List<Course> findCourseByStudentID(@RequestParam Integer studentID){
+        return courseService.getCourseByStudentID(studentID);
+    }
+    @GetMapping("/lecturer/MyCourses")
+    public List<Course> findCourseByLecturerID(@RequestParam Integer lecturerID){
+        return courseService.getCourseByLecturerID(lecturerID);
+    }
 
 }
